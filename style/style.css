@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 10%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+}
+
+p {
+    font-size: 18px;
+    padding: 5px 5%;
+}
+
+form {
+    margin: 10px;
+    font-size: 25px;
+}
+
+input {
+    display: block;
+    width: 250px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+button {
+    width: 250px;
+    height: 40px;
+    margin: 10px 0;
+}

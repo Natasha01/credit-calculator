@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Кредитный калькулятор</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+    <header>Кредитный калькулятор</header>
+    <main>
+        <p>Ипотечный калькулятор онлайн даст возможность заранее просчитать платеж, который потребуется вносить
+            каждый месяц при погашении займа. Благодаря тому, что заемщик будет заранее проинформирован о том, на
+            какую сумму ему следует рассчитывать, он сможет самостоятельно просчитать удобный срок займа.
+        </p>
+        <div class="wrapper">
+            <form name="calculator" onsubmit="calculate(); return false">
+                <!-- <div> -->
+                <label for="credit">Сумма кредита: </label>
+                <input id="credit" name="credit" type="text">
+
+                <label for="downPayment">Сумма первоначального взноса: </label>
+                <input id="downPayment" name="downPayment" type="text">
+
+                <label for="interestRate">Процентная ставка: </label>
+                <input id="interestRate" name="interestRate" type="text">
+
+                <label for="loanTerms">Срок кредитования: </label>
+                <input id="loanTerms" name="loanTerms" type="text">
+                <!-- </div> -->
+
+                <button type="submit" id="calculator">Рассчитать</button>
+            </form>
+            <div>Ежемесячный (аннуитетный) платеж:</div>
+            <div id="result"></div>
+        </div>
+    </main>
+</body>
+
+</html>
