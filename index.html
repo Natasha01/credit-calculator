@@ -7,36 +7,56 @@
     <title>Кредитный калькулятор</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="script/script.js"></script>
 </head>
 
 <body>
     <header>Кредитный калькулятор</header>
     <main>
-        <p>Ипотечный калькулятор онлайн даст возможность заранее просчитать платеж, который потребуется вносить
+        <p class="description">Кредитный калькулятор онлайн даст возможность заранее просчитать платеж, который
+            потребуется вносить
             каждый месяц при погашении займа. Благодаря тому, что заемщик будет заранее проинформирован о том, на
             какую сумму ему следует рассчитывать, он сможет самостоятельно просчитать удобный срок займа.
         </p>
         <div class="wrapper">
             <form name="calculator" onsubmit="calculate(); return false">
-                <!-- <div> -->
-                <label for="credit">Сумма кредита: </label>
+                <div class="border">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <label for="credit">Сумма кредита: </label>
+                </div>
                 <input id="credit" name="credit" type="text">
+                <span>руб.</span>
 
-                <label for="downPayment">Сумма первоначального взноса: </label>
+                <div class="border">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <label for="downPayment">Сумма первоначального взноса: </label>
+                </div>
                 <input id="downPayment" name="downPayment" type="text">
+                <span>руб.</span>
 
-                <label for="interestRate">Процентная ставка: </label>
+                <div class="border">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <label for="interestRate">Процентная ставка: </label>
+                </div>
                 <input id="interestRate" name="interestRate" type="text">
+                <span>%</span>
 
-                <label for="loanTerms">Срок кредитования: </label>
+                <div class="border">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <label for="loanTerms">Срок кредитования: </label>
+                </div>
                 <input id="loanTerms" name="loanTerms" type="text">
-                <!-- </div> -->
+                <span>мес.</span>
 
-                <button type="submit" id="calculator">Рассчитать</button>
+                <button type="submit" id="calculator">РАССЧИТАТЬ</button>
             </form>
-            <div>Ежемесячный (аннуитетный) платеж:</div>
-            <div id="result"></div>
+            <div class="showingPayment">
+                <p>Ежемесячный (аннуитетный) платеж:</p>
+                <div class="result"></div>
+            </div>
         </div>
     </main>
 </body>
